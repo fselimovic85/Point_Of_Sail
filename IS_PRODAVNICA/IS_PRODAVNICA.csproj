@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9346EAAF-2771-44B8-822B-54309510BE33}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>IS_PRODAVNICA</RootNamespace>
+    <AssemblyName>IS_PRODAVNICA</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DBConection.cs" />
+    <Compile Include="DOKUMENTI\IZLAZNI_RACUN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DOKUMENTI\IZLAZNI_RACUN.Designer.cs">
+      <DependentUpon>IZLAZNI_RACUN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DOKUMENTI\OBRACUN_ZARADA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DOKUMENTI\OBRACUN_ZARADA.Designer.cs">
+      <DependentUpon>OBRACUN_ZARADA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DOKUMENTI\OSTALI_TROSKOVI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DOKUMENTI\OSTALI_TROSKOVI.Designer.cs">
+      <DependentUpon>OSTALI_TROSKOVI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DOKUMENTI\ULAZ_KALKULACIJA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DOKUMENTI\ULAZ_KALKULACIJA.Designer.cs">
+      <DependentUpon>ULAZ_KALKULACIJA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IZVESTAJI\EVIDENCIJA_PRODAJE_TROSKOVA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IZVESTAJI\EVIDENCIJA_PRODAJE_TROSKOVA.Designer.cs">
+      <DependentUpon>EVIDENCIJA_PRODAJE_TROSKOVA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IZVESTAJI\KARTICA_ARTIKA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IZVESTAJI\KARTICA_ARTIKA.Designer.cs">
+      <DependentUpon>KARTICA_ARTIKA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MATICNI_PODACI\ARTIKLI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MATICNI_PODACI\ARTIKLI.Designer.cs">
+      <DependentUpon>ARTIKLI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MATICNI_PODACI\POSLOVNI_PARTNERI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MATICNI_PODACI\POSLOVNI_PARTNERI.Designer.cs">
+      <DependentUpon>POSLOVNI_PARTNERI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MATICNI_PODACI\RADNICI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MATICNI_PODACI\RADNICI.Designer.cs">
+      <DependentUpon>RADNICI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GLAVNA_FORMA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GLAVNA_FORMA.Designer.cs">
+      <DependentUpon>GLAVNA_FORMA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MATICNI_PODACI\GEOGRAFSKI_PODACI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MATICNI_PODACI\GEOGRAFSKI_PODACI.Designer.cs">
+      <DependentUpon>GEOGRAFSKI_PODACI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="DOKUMENTI\IZLAZNI_RACUN.resx">
+      <DependentUpon>IZLAZNI_RACUN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DOKUMENTI\OBRACUN_ZARADA.resx">
+      <DependentUpon>OBRACUN_ZARADA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DOKUMENTI\OSTALI_TROSKOVI.resx">
+      <DependentUpon>OSTALI_TROSKOVI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DOKUMENTI\ULAZ_KALKULACIJA.resx">
+      <DependentUpon>ULAZ_KALKULACIJA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IZVESTAJI\EVIDENCIJA_PRODAJE_TROSKOVA.resx">
+      <DependentUpon>EVIDENCIJA_PRODAJE_TROSKOVA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IZVESTAJI\KARTICA_ARTIKA.resx">
+      <DependentUpon>KARTICA_ARTIKA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MATICNI_PODACI\ARTIKLI.resx">
+      <DependentUpon>ARTIKLI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MATICNI_PODACI\POSLOVNI_PARTNERI.resx">
+      <DependentUpon>POSLOVNI_PARTNERI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MATICNI_PODACI\RADNICI.resx">
+      <DependentUpon>RADNICI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GLAVNA_FORMA.resx">
+      <DependentUpon>GLAVNA_FORMA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MATICNI_PODACI\GEOGRAFSKI_PODACI.resx">
+      <DependentUpon>GEOGRAFSKI_PODACI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
